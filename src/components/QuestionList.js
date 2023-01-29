@@ -20,6 +20,8 @@ function QuestionList() {
     })
     .then((res)=>res.json())
     .then((deleted)=>{
+      const updatedQuestions = random.filter((question) => question.id !== id);
+      setRandom(updatedQuestions);
       console.log(deleted)
     })
   }
